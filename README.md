@@ -5,7 +5,7 @@
 ## **Use in the browser**
 
 ```html
-<script src="https://github.com/kenmueller/web-cookies/blob/master/browser/index.min.js"></script>
+<script src="https://raw.githubusercontent.com/kenmueller/web-cookies/master/browser/index.min.js"></script>
 ```
 
 ## **npm**
