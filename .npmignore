@@ -5,3 +5,7 @@ src/
 tests/
 browser/
 lib/*.js.map
+.babelrc
+.gitignore
+.npmignore
+README.md
