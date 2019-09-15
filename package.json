@@ -1,0 +1,47 @@
+{
+	"name": "web-cookies",
+	"version": "1.0.0",
+	"description": "Manipulate cookies in the browser",
+	"main": "lib/index.min.js",
+	"types": "types/index.d.ts",
+	"directories": {
+		"lib": "lib",
+		"types": "types",
+		"test": "tests"
+	},
+	"devDependencies": {
+		"babel-minify": "^0.5.1",
+		"jest": "^24.9.0",
+		"tslint": "^5.20.0",
+		"typescript": "^3.6.3"
+	},
+	"scripts": {
+		"build": "node_modules/.bin/tsc",
+		"minify": "npm run minify-npm && npm run minify-browser",
+		"minify-npm": "node_modules/.bin/babel-minify lib/index.js -o lib/index.min.js",
+		"minify-browser": "node_modules/.bin/babel-minify browser/index.js -o browser/index.min.js",
+		"prepublishOnly": "npm run build && npm run minify",
+		"start": "node lib/index.js",
+		"test": "node_modules/.bin/jest --verbose tests"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kenmueller/web-cookies.git"
+	},
+	"author": "Ken Mueller",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/kenmueller/web-cookies/issues"
+	},
+	"homepage": "https://github.com/kenmueller/web-cookies#readme",
+	"keywords": [
+		"cookies",
+		"web-cookies",
+		"browser cookies",
+		"browser",
+		"cookie",
+		"cookie-parser",
+		"cookie handler",
+		"ken mueller"
+	]
+}

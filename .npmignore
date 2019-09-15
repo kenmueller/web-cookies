@@ -1,0 +1,7 @@
+**/.DS_Store
+tsconfig.json
+tslint.json
+src/
+tests/
+browser/
+lib/*.js.map
