@@ -9,7 +9,7 @@ const cookies = {
 		}, {}),
 	get: name =>
 		(document.cookie.match(`(^|[^;]+)\\s*${name}\\s*=\\s*([^;]+)`) || []).pop(),
-	set: (name, value, { expiration, path }) => {
+	set: (name, value, { expiration, path } = {}) => {
 		const expirationDate = typeof expiration === 'string' || expiration === null
 			? new Date(expiration === null || /^never$/i.test(expiration) ? 864e13 : Date.parse(expiration))
 			: expiration
